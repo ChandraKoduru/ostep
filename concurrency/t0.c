@@ -15,6 +15,7 @@ void *mythread(void *arg) {
 int main (int argc, char *argv[]) {
     pthread_t p1, p2;
     int rc;
+    printf("\nT0------------------\n");
     printf("main: being\n");
     rc = pthread_create(&p1, NULL, mythread, "A"); assert(rc == 0);
     rc = pthread_create(&p2, NULL, mythread, "B"); assert(rc == 0);
