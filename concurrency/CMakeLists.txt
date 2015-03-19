@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
-project(app_project)
+project(app_project C)
+find_package(Threads REQUIRED)
 add_executable(myapp t0.c)
+set(CMAKE_CXX_FLAGS "-g -Wall")
+target_link_libraries(myapp ${CMAKE_THREAD_LIBS_INIT})
 install(TARGETS myapp DESTINATION bin)
