@@ -6,7 +6,10 @@ find_package(Threads REQUIRED)
 #add_executable(cv1 cv1.c)
 #target_link_libraries(cv1 ${CMAKE_THREAD_LIBS_INIT})
 #install(TARGETS cv1 DESTINATION bin)
-
 add_executable(cv2 cv2.c)
 target_link_libraries(cv2 ${CMAKE_THREAD_LIBS_INIT})
 install(TARGETS cv2 DESTINATION bin)
+
+add_executable(posix_cv posix_cv.c)
+target_link_libraries(posix_cv ${CMAKE_THREAD_LIBS_INIT})
+install(TARGETS posix_cv DESTINATION bin)
