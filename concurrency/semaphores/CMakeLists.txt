@@ -6,3 +6,7 @@ find_package(Threads REQUIRED)
 add_executable(sem_as_cv sem_as_cv.c)
 target_link_libraries(sem_as_cv ${CMAKE_THREAD_LIBS_INIT})
 install(TARGETS sem_as_cv DESTINATION bin)
+
+add_executable(sem_prod_cons1 sem_prod_cons1.c)
+target_link_libraries(sem_prod_cons1 ${CMAKE_THREAD_LIBS_INIT})
+install(TARGETS sem_prod_cons1 DESTINATION bin)
