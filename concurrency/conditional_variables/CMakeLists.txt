@@ -13,3 +13,7 @@ install(TARGETS cv2 DESTINATION bin)
 add_executable(posix_cv posix_cv.c)
 target_link_libraries(posix_cv ${CMAKE_THREAD_LIBS_INIT})
 install(TARGETS posix_cv DESTINATION bin)
+
+add_executable(prod_cons_final prod_cons_final.c)
+target_link_libraries(prod_cons_final ${CMAKE_THREAD_LIBS_INIT})
+install(TARGETS prod_cons_final DESTINATION bin)
